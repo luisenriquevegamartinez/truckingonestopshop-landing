@@ -25,8 +25,8 @@ const faqs = [
     a: 'Absolutely. We have freight factoring partnerships that can get you paid in as little as 24 hours instead of waiting 30-60 days. We also follow up aggressively with brokers on outstanding invoices.',
   },
   {
-    q: 'What if I\'m not happy with the service?',
-    a: 'There\'s no long-term contract. You can cancel at any time. Our goal is to earn your business every single week by delivering results — not to lock you into a commitment.',
+    q: 'Is there a long-term contract?',
+    a: 'No long-term contract. You can cancel at any time. Our goal is to earn your business every single week by delivering results — not to lock you into a commitment you can\'t get out of.',
   },
   {
     q: 'Do you dispatch for fleets or only owner-operators?',
@@ -35,48 +35,36 @@ const faqs = [
 ];
 ---
 
-<section class="py-24">
+<section class="bg-white py-24">
   <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
     <!-- Header -->
     <div class="mb-12 text-center">
-      <p
-        class="mb-3 text-sm font-semibold uppercase tracking-widest text-orange-400"
-      >
+      <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-orange-500">
         FAQ
       </p>
-      <h2 class="mb-4 text-4xl font-black text-white sm:text-5xl">
+      <h2 class="mb-4 text-4xl font-black text-gray-900 sm:text-5xl">
         Common Questions
       </h2>
-      <p class="text-lg text-slate-400">
+      <p class="text-lg text-gray-600">
         Everything you need to know before getting started with us.
       </p>
     </div>
 
     <!-- Accordion -->
-    <div class="space-y-3">
+    <div class="divide-y divide-gray-200 border-y border-gray-200">
       {
-        faqs.map((faq, i) => (
-          <details class="group rounded-2xl border border-slate-700/50 bg-slate-800/40">
-            <summary class="flex cursor-pointer items-center justify-between px-6 py-5">
-              <span class="pr-4 text-sm font-semibold text-white">{faq.q}</span>
-              <span class="shrink-0 text-slate-400 transition-transform group-open:rotate-45">
-                <svg
-                  class="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M12 4.5v15m7.5-7.5h-15"
-                  />
+        faqs.map((faq) => (
+          <details class="group">
+            <summary class="flex cursor-pointer items-center justify-between py-5">
+              <span class="pr-4 text-sm font-semibold text-gray-900">{faq.q}</span>
+              <span class="shrink-0 text-gray-400 transition-transform duration-200 group-open:rotate-45">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                 </svg>
               </span>
             </summary>
-            <div class="px-6 pb-5">
-              <p class="text-sm leading-relaxed text-slate-400">{faq.a}</p>
+            <div class="pb-5 pr-8">
+              <p class="text-sm leading-relaxed text-gray-600">{faq.a}</p>
             </div>
           </details>
         ))

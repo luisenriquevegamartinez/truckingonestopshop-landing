@@ -3,55 +3,47 @@ const testimonials = [
   {
     name: 'John D.',
     role: 'Owner-Operator · Dry Van',
-    stars: 5,
     text: 'A personal dispatcher finds and negotiates the best loads tailored to my preferences. Real-time tracking and support from pickup to delivery — I never feel alone on the road.',
   },
   {
     name: 'Maria S.',
     role: 'Small Fleet Owner · Flatbed',
-    stars: 5,
     text: 'The personalized attention is what sets them apart. They truly understand our routes and needs. It feels like a real partnership, not just another dispatch company.',
   },
   {
     name: 'Jose G.',
     role: 'Owner-Operator · Reefer',
-    stars: 5,
-    text: 'I\'ve been in trucking for 15 years. TOSS is the best dispatch service I\'ve worked with — period. They negotiate rates I never could on my own and handle all my paperwork.',
+    text: 'I\'ve been in trucking for 15 years. TOSS is the best dispatch service I\'ve worked with — period. They negotiate rates I never could on my own.',
   },
   {
     name: 'Andres F.',
     role: 'Owner-Operator · Step Deck',
-    stars: 5,
     text: 'My gross revenue went up 23% in the first two months. The dispatchers know the market, know the brokers, and they fight for every dollar on every load.',
   },
   {
     name: 'Camilo P.',
     role: 'Fleet Owner · Hotshot',
-    stars: 5,
     text: 'Setting up with TOSS was the best business decision I made this year. The accounting support alone saves me dozens of hours a month. Highly recommend.',
   },
   {
     name: 'Carlos M.',
     role: 'Owner-Operator · Conestoga',
-    stars: 5,
     text: 'They found me loads I didn\'t even know existed. The compliance team keeps me current on all my filings so I never have to worry about being pulled from the road.',
   },
 ];
 ---
 
-<section class="bg-slate-800/20 py-24">
+<section class="bg-gray-50 py-24">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <!-- Header -->
     <div class="mb-16 text-center">
-      <p
-        class="mb-3 text-sm font-semibold uppercase tracking-widest text-orange-400"
-      >
+      <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-orange-500">
         Testimonials
       </p>
-      <h2 class="mb-4 text-4xl font-black text-white sm:text-5xl">
+      <h2 class="mb-4 text-4xl font-black text-gray-900 sm:text-5xl">
         Carriers Love Working With Us
       </h2>
-      <p class="mx-auto max-w-xl text-lg text-slate-400">
+      <p class="mx-auto max-w-xl text-lg text-gray-600">
         Don't take our word for it. Here's what owner-operators and fleet owners say
         about partnering with Trucking One Stop Shop.
       </p>
@@ -61,31 +53,27 @@ const testimonials = [
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {
         testimonials.map((t) => (
-          <div class="rounded-2xl border border-slate-700/50 bg-slate-800/50 p-6">
+          <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
             <!-- Stars -->
-            <div class="mb-4 flex gap-1">
-              {Array.from({ length: t.stars }).map(() => (
-                <svg
-                  class="h-4 w-4 text-orange-400"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
+            <div class="mb-4 flex gap-0.5">
+              {Array.from({ length: 5 }).map(() => (
+                <svg class="h-4 w-4 text-orange-400" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 0 0 .95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 0 0-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 0 0-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 0 0-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 0 0 .951-.69l1.07-3.292Z" />
                 </svg>
               ))}
             </div>
 
-            <blockquote class="mb-5 text-sm leading-relaxed text-slate-300">
+            <blockquote class="mb-5 text-sm leading-relaxed text-gray-600">
               "{t.text}"
             </blockquote>
 
             <div class="flex items-center gap-3">
-              <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-orange-500/20 text-sm font-bold text-orange-400">
+              <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-orange-100 text-sm font-bold text-orange-600">
                 {t.name.charAt(0)}
               </div>
               <div>
-                <p class="text-sm font-semibold text-white">{t.name}</p>
-                <p class="text-xs text-slate-400">{t.role}</p>
+                <p class="text-sm font-semibold text-gray-900">{t.name}</p>
+                <p class="text-xs text-gray-400">{t.role}</p>
               </div>
             </div>
           </div>

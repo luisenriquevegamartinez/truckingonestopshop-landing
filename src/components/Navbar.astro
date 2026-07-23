@@ -7,9 +7,7 @@ const navLinks = [
 ];
 ---
 
-<header
-  class="fixed top-0 left-0 right-0 z-50 border-b border-slate-800/60 bg-slate-900/95 backdrop-blur-md"
->
+<header class="fixed top-0 left-0 right-0 z-50 border-b border-gray-200 bg-white">
   <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
     <!-- Logo -->
     <a href="/" class="flex items-center shrink-0">
@@ -18,7 +16,14 @@ const navLinks = [
         alt="Trucking One Stop Shop"
         class="h-10 w-auto"
         loading="eager"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
       />
+      <span
+        style="display:none"
+        class="text-lg font-black text-gray-900"
+      >
+        Trucking One Stop Shop
+      </span>
     </a>
 
     <!-- Desktop nav -->
@@ -27,7 +32,7 @@ const navLinks = [
         navLinks.map((link) => (
           <a
             href={link.href}
-            class="text-sm font-medium text-slate-300 transition-colors hover:text-orange-400"
+            class="text-sm font-medium text-gray-600 transition-colors hover:text-orange-500"
           >
             {link.label}
           </a>
@@ -39,10 +44,10 @@ const navLinks = [
     <div class="hidden items-center gap-4 md:flex">
       <a
         href="tel:+18887771839"
-        class="flex items-center gap-2 text-sm font-medium text-slate-300 transition-colors hover:text-white"
+        class="flex items-center gap-2 text-sm font-semibold text-gray-700 hover:text-gray-900 transition-colors"
       >
         <svg
-          class="h-4 w-4 text-orange-400"
+          class="h-4 w-4 text-orange-500"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -58,7 +63,7 @@ const navLinks = [
       </a>
       <a
         href="#contact"
-        class="rounded-lg bg-orange-500 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-orange-600 hover:shadow-lg hover:shadow-orange-500/20"
+        class="rounded-lg bg-orange-500 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-orange-600 hover:shadow-md hover:shadow-orange-200"
       >
         Get Free Setup
       </a>
@@ -70,32 +75,29 @@ const navLinks = [
       class="flex flex-col items-center justify-center gap-1.5 p-1 md:hidden"
       aria-label="Toggle navigation menu"
     >
-      <span class="block h-0.5 w-6 bg-white transition-all" id="bar1"></span>
-      <span class="block h-0.5 w-6 bg-white transition-all" id="bar2"></span>
-      <span class="block h-0.5 w-6 bg-white transition-all" id="bar3"></span>
+      <span class="block h-0.5 w-6 bg-gray-700"></span>
+      <span class="block h-0.5 w-6 bg-gray-700"></span>
+      <span class="block h-0.5 w-6 bg-gray-700"></span>
     </button>
   </div>
 
   <!-- Mobile menu -->
-  <div
-    id="mobile-menu"
-    class="hidden border-t border-slate-800 bg-slate-900 md:hidden"
-  >
+  <div id="mobile-menu" class="hidden border-t border-gray-100 bg-white md:hidden">
     <div class="flex flex-col gap-4 px-4 py-6">
       {
         navLinks.map((link) => (
           <a
             href={link.href}
-            class="text-sm font-medium text-slate-300 hover:text-orange-400"
+            class="text-sm font-medium text-gray-600 hover:text-orange-500"
           >
             {link.label}
           </a>
         ))
       }
-      <div class="border-t border-slate-800 pt-4">
+      <div class="border-t border-gray-100 pt-4">
         <a
           href="tel:+18887771839"
-          class="mb-3 flex items-center gap-2 text-sm font-medium text-slate-300"
+          class="mb-3 block text-sm font-semibold text-gray-700"
         >
           +1 888-777-1839
         </a>
@@ -118,7 +120,6 @@ const navLinks = [
     menu?.classList.toggle('hidden');
   });
 
-  // Close mobile menu when a link is clicked
   menu?.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
       menu.classList.add('hidden');
