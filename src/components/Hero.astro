@@ -3,93 +3,76 @@
 
 <section class="relative min-h-screen overflow-hidden bg-white pt-20">
 
-  <!-- Background frame shape (curved white panel from logitydispatch) -->
-  <img
-    src="/images/hero-frame.svg"
-    alt=""
-    aria-hidden="true"
-    class="pointer-events-none absolute inset-0 h-full w-full select-none"
-    style="object-fit: fill;"
-  />
+  <!-- ─── RIGHT: frame shape + video (absolute, right half) ─── -->
+  <div class="absolute inset-y-0 right-0 hidden w-[52%] overflow-hidden lg:block">
+    <!-- Curved frame shape as background of the right panel -->
+    <img
+      src="/images/hero-frame.svg"
+      alt=""
+      aria-hidden="true"
+      class="absolute inset-0 h-full w-full"
+      style="object-fit: fill;"
+    />
+    <!-- Truck video: autoplay, muted, loop — matches logitydispatch.com hero -->
+    <video
+      src="/videos/hero-truck.mp4"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+      class="relative h-full w-full object-cover"
+    ></video>
+  </div>
 
+  <!-- Mobile: video as full-width block above content -->
+  <div class="relative aspect-video w-full overflow-hidden lg:hidden">
+    <video
+      src="/videos/hero-truck.mp4"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+      class="h-full w-full object-cover"
+    ></video>
+  </div>
+
+  <!-- ─── Content layer ─── -->
   <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div
-      class="grid min-h-[calc(100vh-80px)] items-center gap-10 py-16
-             lg:grid-cols-[1fr_420px] lg:gap-16 xl:grid-cols-[1fr_460px]"
-    >
+    <div class="grid min-h-[calc(100vh-80px)] items-center py-12 lg:grid-cols-2 lg:py-20">
 
-      <!-- ─── LEFT: Headline + trust signals ─── -->
-      <div>
+      <!-- LEFT: Headline + form -->
+      <div class="pr-0 lg:pr-12">
 
-        <!-- Rating badge using the real SVG stars from logitydispatch -->
+        <!-- Stars using the real SVG from logitydispatch -->
         <div class="mb-6 flex items-center gap-3">
-          <img
-            src="/images/hero-graphic.svg"
-            alt="5 stars"
-            class="h-5 w-auto"
-            loading="eager"
-          />
+          <img src="/images/hero-graphic.svg" alt="5 stars" class="h-5 w-auto" loading="eager" />
           <span class="text-sm font-semibold text-gray-700">
             Rated 4.9+ stars by 500+ carriers
           </span>
         </div>
 
-        <!-- Main headline — "truck" colored in brand orange -->
+        <!-- Headline — "truck" in brand orange -->
         <h1
           class="mb-5 text-5xl font-black leading-[1.06] tracking-tight text-gray-900
-                 sm:text-6xl xl:text-7xl"
+                 sm:text-6xl xl:text-[68px]"
         >
           Automate your<br />
           <span class="text-orange-500">truck</span> business
         </h1>
 
-        <p class="mb-8 max-w-lg text-lg leading-relaxed text-gray-600">
+        <p class="mb-8 max-w-md text-lg leading-relaxed text-gray-600">
           Reliable truck dispatch services for owner-operators and fleets —
           maximize profits, minimize stress, drive success.
         </p>
 
-        <!-- Trust checklist -->
-        <ul class="mb-10 space-y-3">
-          {[
-            'Dedicated dispatcher assigned to your account',
-            'Starting at 5% — no setup fees, no contracts',
-            '24/7 support from pickup to final delivery',
-          ].map((item) => (
-            <li class="flex items-center gap-3 text-sm font-medium text-gray-700">
-              <span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-orange-500">
-                <svg class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3.5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
-                </svg>
-              </span>
-              {item}
-            </li>
-          ))}
-        </ul>
-
-        <!-- Truck type quick links -->
-        <div class="flex flex-wrap gap-2">
-          {['Dry Van', 'Flatbed', 'Reefer', 'Step Deck', 'Hotshot', 'Conestoga'].map((t) => (
-            <a
-              href="#trucks"
-              class="rounded-full border border-gray-200 bg-white px-4 py-1.5 text-xs
-                     font-semibold text-gray-600 transition-all
-                     hover:border-orange-400 hover:text-orange-500 hover:shadow-sm"
-            >
-              {t}
-            </a>
-          ))}
-        </div>
-      </div>
-
-      <!-- ─── RIGHT: Lead capture form ─── -->
-      <div class="w-full rounded-2xl border border-gray-100 bg-white p-6 shadow-xl sm:p-8">
-        <h2 class="mb-1 text-2xl font-black text-gray-900">Get a free setup</h2>
-        <p class="mb-5 text-sm text-gray-500">
-          A dispatcher will reach out within 24 hours.
-        </p>
-
-        <form class="space-y-3" action="mailto:info@truckingonestopshop.net" method="POST">
-
+        <!-- Lead form (same position as logitydispatch — below headline, left column) -->
+        <form
+          class="space-y-3 rounded-2xl border border-gray-100 bg-white p-6 shadow-lg"
+          action="mailto:info@truckingonestopshop.net"
+          method="POST"
+        >
           <div>
             <label class="mb-1 block text-xs font-semibold uppercase tracking-wide text-gray-500">
               Your name
@@ -100,8 +83,8 @@
               placeholder="Your name"
               required
               class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
-                     placeholder-gray-400 transition
-                     focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20"
+                     placeholder-gray-400 transition focus:border-orange-500 focus:outline-none
+                     focus:ring-2 focus:ring-orange-500/20"
             />
           </div>
 
@@ -115,8 +98,8 @@
               placeholder="Your email"
               required
               class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
-                     placeholder-gray-400 transition
-                     focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20"
+                     placeholder-gray-400 transition focus:border-orange-500 focus:outline-none
+                     focus:ring-2 focus:ring-orange-500/20"
             />
           </div>
 
@@ -130,8 +113,8 @@
               placeholder="Your phone"
               required
               class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
-                     placeholder-gray-400 transition
-                     focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20"
+                     placeholder-gray-400 transition focus:border-orange-500 focus:outline-none
+                     focus:ring-2 focus:ring-orange-500/20"
             />
           </div>
 
@@ -159,10 +142,13 @@
           </button>
         </form>
 
-        <p class="mt-4 text-center text-xs text-gray-400">
-          No contracts. No hidden fees. Cancel anytime.
+        <p class="mt-3 text-xs text-gray-400">
+          No contracts · No hidden fees · Cancel anytime
         </p>
       </div>
+
+      <!-- Right column spacer on desktop (video is absolute) -->
+      <div class="hidden lg:block" aria-hidden="true"></div>
 
     </div>
   </div>

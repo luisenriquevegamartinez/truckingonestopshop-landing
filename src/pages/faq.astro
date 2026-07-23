@@ -1,0 +1,117 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import PageHero from '../components/PageHero.astro';
+import CTABanner from '../components/CTABanner.astro';
+import Footer from '../components/Footer.astro';
+
+const sections = [
+  {
+    id: 'advantages',
+    title: 'Advantages',
+    faqs: [
+      {
+        q: 'What dispatching services does Trucking One Stop Shop provide?',
+        a: 'TOSS offers a full suite of trucking back-office services: dedicated load dispatching, rate negotiation with brokers, DOT compliance management, trucking accounting, freight factoring, document management, and company formation. You can use any combination of services — from dispatch-only to our complete package.',
+      },
+      {
+        q: 'How does TOSS compare to hiring an in-house dispatcher?',
+        a: 'An in-house dispatcher costs $40,000–$60,000 per year in salary alone, plus benefits and training. TOSS charges 5% of gross revenue — only when your truck earns. That means on a $10,000 gross month you pay $500, not $4,000+. Plus you get a team with established broker relationships and compliance expertise included.',
+      },
+    ],
+  },
+  {
+    id: 'process',
+    title: 'Process',
+    faqs: [
+      {
+        q: 'What are the requirements to sign up with Trucking One Stop Shop?',
+        a: 'Requirements vary by truck type: Dry Van (1+ month active MC), Box Truck (1+ year active MC + 1 DOT inspection), Hotshot (6+ months active MC + 35ft trailer), Flatbed / Reefer / Step Deck / Conestoga (6+ months active MC). You\'ll also need active insurance and a valid operating authority.',
+      },
+      {
+        q: 'Can a new authority (new MC) work with TOSS?',
+        a: 'Yes — Dry Van carriers can start with just 1 month of active MC. Other truck types require 6 months. We understand that new authorities need support most, and our dispatchers are experienced in helping new carriers build profitable lane patterns from the start.',
+      },
+    ],
+  },
+  {
+    id: 'general',
+    title: 'General',
+    faqs: [
+      {
+        q: 'Can TOSS work with new trucking businesses?',
+        a: 'Absolutely. We work with both established carriers and new businesses. For new carriers, we provide additional guidance on lane selection, broker relationships, and compliance requirements. Many of our most successful long-term partners started with us in their first year of operation.',
+      },
+      {
+        q: 'Can I customize the services I receive from TOSS?',
+        a: 'Yes. You can choose from dispatch-only, dispatch + accounting, dispatch + compliance, or our full-service package. Services are flexible and can be adjusted as your business grows. There\'s no long-term contract — you can add or remove services at any time.',
+      },
+    ],
+  },
+];
+---
+
+<Layout title="FAQ — Trucking One Stop Shop" description="Frequently asked questions about TOSS dispatch services, pricing, requirements, and how to get started.">
+  <Navbar />
+
+  <PageHero
+    title="FAQ"
+    subtitle="Frequently Asked Questions"
+    description="At Trucking One Stop Shop, we welcome your questions. It's part of our commitment to transparency and building long-term partnerships with every carrier we work with."
+  />
+
+  <main class="bg-white">
+    <!-- Table of contents -->
+    <div class="border-b border-gray-100 bg-gray-50">
+      <div class="mx-auto flex max-w-4xl gap-6 px-4 py-4 sm:px-6">
+        {sections.map((s) => (
+          <a
+            href={`#${s.id}`}
+            class="text-sm font-semibold text-gray-600 transition-colors hover:text-orange-500"
+          >
+            {s.title}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <div class="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
+      {sections.map((section) => (
+        <div id={section.id} class="mb-16 scroll-mt-24">
+          <h2 class="mb-8 text-2xl font-black text-gray-900">{section.title}</h2>
+          <div class="divide-y divide-gray-200 border-y border-gray-200">
+            {section.faqs.map((faq) => (
+              <details class="group">
+                <summary class="flex cursor-pointer list-none items-start justify-between py-5 pr-2">
+                  <span class="pr-4 text-base font-bold text-gray-900">{faq.q}</span>
+                  <span class="mt-0.5 shrink-0 text-gray-400 transition-transform duration-200 group-open:rotate-45">
+                    <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+                    </svg>
+                  </span>
+                </summary>
+                <div class="pb-5 pr-8">
+                  <p class="text-base leading-relaxed text-gray-600">{faq.a}</p>
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      ))}
+
+      <div class="mt-4 rounded-2xl bg-orange-50 border border-orange-100 p-8 text-center">
+        <h3 class="mb-2 text-xl font-black text-gray-900">Still have questions?</h3>
+        <p class="mb-5 text-gray-600">Our team is available Monday–Friday 7AM–5PM EST.</p>
+        <a
+          href="/contact-us"
+          class="inline-block rounded-sm bg-orange-500 px-8 py-3 text-sm font-bold text-white transition-all hover:bg-orange-600"
+        >
+          Ask a question →
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <CTABanner />
+  <Footer />
+</Layout>
