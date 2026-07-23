@@ -1,5 +1,5 @@
 ---
-const base = import.meta.env.BASE_URL;
+const base = (import.meta.env.BASE_URL + '/').replace('//', '/');
 const trucks = [
   { type: 'Hotshot',          commission: '7%', img: `${base}images/truck-hotshot.png`,   href: '#contact' },
   { type: 'Flatbed',          commission: '5%', img: `${base}images/truck-flatbed.png`,   href: '#contact' },
