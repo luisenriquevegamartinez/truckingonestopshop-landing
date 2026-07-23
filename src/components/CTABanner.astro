@@ -1,34 +1,56 @@
 ---
 ---
 
-<section class="bg-orange-500 py-20">
-  <div class="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-    <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-orange-100">
-      Ready to Grow Your Business?
-    </p>
-    <h2 class="mb-6 text-4xl font-black text-white sm:text-5xl">
-      Your Success Is Our Mission
-    </h2>
-    <p class="mb-10 mx-auto max-w-xl text-lg text-orange-100">
-      Join 500+ owner-operators and fleet owners who've trusted Trucking One Stop
-      Shop to handle their dispatch, compliance, and accounting.
-    </p>
-    <div class="flex flex-col gap-4 sm:flex-row sm:justify-center">
-      <a
-        href="#contact"
-        class="rounded-lg bg-white px-8 py-4 text-base font-bold text-orange-600 transition-all hover:bg-orange-50 hover:shadow-lg"
-      >
-        Get Free Setup Now
-      </a>
-      <a
-        href="tel:+18887771839"
-        class="rounded-lg border-2 border-white/50 px-8 py-4 text-base font-bold text-white transition-all hover:bg-white/10"
-      >
-        Call +1 888-777-1839
-      </a>
+<section class="bg-white py-24">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+
+      <!-- Left: Text -->
+      <div>
+        <h2 class="mb-5 text-4xl font-black leading-tight text-gray-900 sm:text-5xl">
+          Don't drive empty.<br />
+          <span class="text-orange-500">Drive with TOSS!</span>
+        </h2>
+        <p class="mb-8 text-lg leading-relaxed text-gray-600">
+          You didn't buy a truck to chase bad loads or sit empty. Our dedicated dispatchers help you stay loaded, earn more per mile, and eliminate the stress of running your own back office.
+        </p>
+
+        <ul class="mb-10 space-y-4">
+          {[
+            'Full-Service Dispatch Support',
+            'Efficient Route Planning',
+            'Non-forced dispatch — you approve every load',
+          ].map((item) => (
+            <li class="flex items-center gap-3 text-base font-medium text-gray-700">
+              <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-orange-500">
+                <svg class="h-3.5 w-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                </svg>
+              </span>
+              {item}
+            </li>
+          ))}
+        </ul>
+
+        <div class="flex flex-col gap-3 sm:flex-row">
+          <a href="#setup" class="rounded-lg bg-orange-500 px-8 py-4 text-center text-base font-bold text-white transition-all hover:bg-orange-600 hover:shadow-lg hover:shadow-orange-200">
+            Send Request
+          </a>
+          <a href="tel:+18887771839" class="flex items-center justify-center gap-2 rounded-lg border-2 border-gray-300 px-8 py-4 text-base font-bold text-gray-700 transition-all hover:border-orange-400 hover:text-orange-500">
+            +1 888-777-1839
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Truck illustration -->
+      <div class="flex items-center justify-center">
+        <img
+          src="/images/cta-truck.png"
+          alt="Trucking One Stop Shop dispatch"
+          class="w-full max-w-lg object-contain"
+          loading="lazy"
+        />
+      </div>
     </div>
-    <p class="mt-6 text-sm text-orange-200">
-      No contracts. No setup fees. Cancel anytime.
-    </p>
   </div>
 </section>

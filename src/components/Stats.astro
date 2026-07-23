@@ -1,23 +1,53 @@
 ---
-const stats = [
-  { value: '10+', label: 'Years of Experience' },
-  { value: '500+', label: 'Carriers Served' },
-  { value: '$7.5k', label: 'Avg Gross per Load' },
-  { value: '24/7', label: 'Dispatcher Support' },
-];
 ---
 
-<section class="border-y border-gray-200 bg-gray-50 py-14">
+<section id="about" class="bg-white py-24">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-2 gap-8 lg:grid-cols-4">
-      {
-        stats.map((stat, i) => (
-          <div class={`text-center ${i < stats.length - 1 ? 'lg:border-r lg:border-gray-200' : ''}`}>
-            <p class="text-4xl font-black text-orange-500 lg:text-5xl">{stat.value}</p>
-            <p class="mt-2 text-sm font-medium text-gray-500">{stat.label}</p>
-          </div>
-        ))
-      }
+    <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+
+      <!-- Left: Text content -->
+      <div>
+        <p class="mb-2 text-sm font-semibold uppercase tracking-widest text-orange-500">About Us</p>
+        <h2 class="mb-5 text-4xl font-black text-gray-900 sm:text-5xl">About us</h2>
+        <p class="mb-5 text-lg leading-relaxed text-gray-600">
+          Trucking One Stop Shop was founded with one mission: empower independent carriers and small fleets to thrive in a competitive market. We're not a call center — we're your dedicated back-office partner.
+        </p>
+        <p class="mb-8 text-base leading-relaxed text-gray-600">
+          Our dispatchers don't just find loads. They learn your preferences, build broker relationships on your behalf, and fight for every dollar on every mile. From compliance to accounting to same-day load booking, we handle it all.
+        </p>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-2 gap-5 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4">
+          {[
+            { value: '10+',   label: 'Years of experience' },
+            { value: '1B+',   label: 'Lbs Dispatched' },
+            { value: '$7.5k', label: 'Average Gross Revenue' },
+            { value: '500+',  label: 'Carriers Served' },
+          ].map((stat) => (
+            <div class="rounded-xl border border-gray-200 p-4 text-center shadow-sm">
+              <p class="text-3xl font-black text-orange-500">{stat.value}</p>
+              <p class="mt-1 text-xs font-medium text-gray-500">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+
+        <a href="#setup" class="mt-8 inline-flex items-center gap-2 text-sm font-bold text-orange-500 hover:text-orange-600 transition-colors">
+          Learn more about us
+          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Right: Truck image -->
+      <div class="overflow-hidden rounded-2xl bg-gray-100">
+        <img
+          src="/images/about-truck.png"
+          alt="TOSS trucking fleet"
+          class="h-full w-full object-cover"
+          loading="lazy"
+        />
+      </div>
     </div>
   </div>
 </section>

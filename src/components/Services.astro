@@ -1,100 +1,121 @@
 ---
 const services = [
   {
-    title: 'Dispatch Services',
-    desc: 'Dedicated dispatchers who become experts on your business, finding loads aligned with your preferred lanes and cargo types.',
-    badge: 'From 5%',
-    iconPath: 'M9 17a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM19 17a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM13 16V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h1m8-1a1 1 0 0 1-1 1H9m4-1V8a1 1 0 0 1 1-1h2.586a1 1 0 0 1 .707.293l3.414 3.414a1 1 0 0 1 .293.707V16a1 1 0 0 1-1 1h-1m-6-1a1 1 0 0 0 1 1h1M5 17a2 2 0 1 0 4 0m-4 0a2 2 0 1 1 4 0',
+    icon: '/images/icon-dispatch.svg',
+    title: 'Dispatching — Trucking Services',
+    desc: 'Your dedicated dispatcher handles load finding, rate negotiation, and broker communication so you can focus on driving.',
+    badge: 'SPECIAL OFFER',
+    badgeColor: 'bg-orange-500 text-white',
+    promo: 'From 5% of gross',
+    promoColor: 'text-orange-500 font-bold',
   },
   {
-    title: 'Rate Negotiation',
-    desc: 'Expert advocacy securing competitive and profitable load rates with our extensive network of trusted broker partners.',
-    badge: 'Max Revenue',
-    iconPath: 'M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z',
+    icon: '/images/icon-document.svg',
+    title: 'Document Dispatch Services',
+    desc: 'We handle all your dispatch paperwork — rate confirmations, BOLs, check calls, and delivery receipts.',
+    badge: 'NEW',
+    badgeColor: 'bg-blue-500 text-white',
+    promo: null,
+    promoColor: null,
   },
   {
-    title: 'Trucking Accounting',
-    desc: 'Rapid invoicing, payment follow-up, and detailed earnings reports — all handled so you can focus on driving.',
-    badge: 'Full Service',
-    iconPath: 'M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z',
+    icon: '/images/icon-rate.svg',
+    title: 'Trucking Paperwork Services',
+    desc: 'End-to-end document management so your operations stay organized and compliant at all times.',
+    badge: null,
+    badgeColor: null,
+    promo: null,
+    promoColor: null,
   },
   {
-    title: 'Document Management',
-    desc: 'Compliance and permit processing support. We handle all your paperwork so you can stay on the road and keep earning.',
-    badge: 'Error-Free',
-    iconPath: 'M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z',
+    icon: '/images/icon-rate.svg',
+    title: 'Freight Rate Negotiation Services',
+    desc: 'Our experienced dispatchers negotiate aggressively to secure the best possible rates on every load.',
+    badge: null,
+    badgeColor: null,
+    promo: null,
+    promoColor: null,
   },
   {
-    title: 'DOT Compliance',
-    desc: 'Proactive renewal management and DOT compliance assistance. Stay legal, stay on the road — we track every deadline.',
-    badge: 'Always Current',
-    iconPath: 'M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z',
+    icon: '/images/icon-dot.svg',
+    title: 'DOT Compliance Services',
+    desc: 'Stay fully compliant with proactive permit renewals, DOT filings, and regulatory tracking.',
+    badge: null,
+    badgeColor: null,
+    promo: null,
+    promoColor: null,
   },
   {
+    icon: '/images/icon-accounting.svg',
+    title: 'Truckers Accounting',
+    desc: 'Professional bookkeeping, invoicing, and earnings reports tailored for owner-operators and small fleets.',
+    badge: null,
+    badgeColor: null,
+    promo: null,
+    promoColor: null,
+  },
+  {
+    icon: '/images/icon-factoring.svg',
     title: 'Freight Factoring',
-    desc: 'Get paid faster. Stop waiting 30-60 days — our factoring partnerships get cash in your account within 24 hours.',
-    badge: 'Fast Pay',
-    iconPath: 'M7.5 21 3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5',
+    desc: 'Stop waiting 30-60 days for broker payments. Our factoring partnerships get cash in your account within 24 hours.',
+    badge: null,
+    badgeColor: null,
+    promo: null,
+    promoColor: null,
   },
   {
-    title: 'Company Formation',
-    desc: 'LLC formation, EIN registration, and authority setup from start to finish. We help you get your carrier business running right.',
-    badge: 'Get Started',
-    iconPath: 'M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21',
-  },
-  {
-    title: 'Invoice Processing',
-    desc: 'Expedited payment processing and aggressive broker follow-up so your cash flow stays healthy and consistent.',
-    badge: '24h Processing',
-    iconPath: 'M9 14.25l6-6m4.5-3.493V21.75l-3.75-1.5-3.75 1.5-3.75-1.5-3.75 1.5V4.757c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0c1.1.128 1.907 1.077 1.907 2.185ZM9.75 9h.008v.008H9.75V9Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm4.125 4.5h.008v.008h-.008V13.5Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z',
+    icon: '/images/icon-dispatch.svg',
+    title: 'Company Formation Services',
+    desc: 'LLC setup, EIN registration, and operating authority — we help you get your carrier business legally established.',
+    badge: null,
+    badgeColor: null,
+    promo: null,
+    promoColor: null,
   },
 ];
 ---
 
 <section id="services" class="bg-white py-24">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <!-- Header -->
-    <div class="mb-16 text-center">
-      <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-orange-500">
-        What We Do
-      </p>
-      <h2 class="mb-4 text-4xl font-black text-gray-900 sm:text-5xl">
-        Everything Your Trucking Business Needs
-      </h2>
+    <div class="mb-4 text-center">
+      <p class="mb-2 text-sm font-semibold uppercase tracking-widest text-orange-500">Our Services</p>
+      <h2 class="mb-4 text-4xl font-black text-gray-900 sm:text-5xl">Discover our services</h2>
       <p class="mx-auto max-w-2xl text-lg text-gray-600">
-        From finding loads to handling your books — we take care of the back office
-        so you can stay on the road and keep earning.
+        Negotiating dispatch rates and drowning in paperwork can be exhausting. Let us handle it while you drive and earn.
       </p>
     </div>
 
-    <!-- Grid -->
-    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-      {
-        services.map((service) => (
-          <div class="group rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-all hover:border-orange-200 hover:shadow-md">
-            <!-- Icon -->
-            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-orange-50">
-              <svg
-                class="h-6 w-6 text-orange-500"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="1.5"
-              >
-                <path stroke-linecap="round" stroke-linejoin="round" d={service.iconPath} />
-              </svg>
-            </div>
-
-            <!-- Badge -->
-            <span class="mb-3 inline-block rounded-full bg-orange-50 px-2.5 py-0.5 text-xs font-semibold text-orange-600">
-              {service.badge}
+    <div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      {services.map((s) => (
+        <div class="group relative flex flex-col rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-all hover:border-orange-200 hover:shadow-md">
+          {/* Badges */}
+          {s.badge && (
+            <span class={`absolute right-4 top-4 rounded-full px-2.5 py-0.5 text-xs font-bold ${s.badgeColor}`}>
+              {s.badge}
             </span>
+          )}
 
-            <h3 class="mb-2 text-base font-bold text-gray-900">{service.title}</h3>
-            <p class="text-sm leading-relaxed text-gray-500">{service.desc}</p>
+          {/* Icon */}
+          <div class="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-orange-50 p-3">
+            <img src={s.icon} alt={s.title} class="h-8 w-8 object-contain" loading="lazy"
+              onerror="this.style.display='none'" />
           </div>
-        ))
-      }
+
+          {s.promo && (
+            <p class={`mb-1 text-sm ${s.promoColor}`}>{s.promo}</p>
+          )}
+
+          <h3 class="mb-2 text-base font-bold text-gray-900">{s.title}</h3>
+          <p class="mb-4 flex-1 text-sm leading-relaxed text-gray-500">{s.desc}</p>
+
+          <a href="#setup" class="mt-auto inline-flex items-center gap-1 text-sm font-semibold text-orange-500 hover:text-orange-600">
+            Learn more
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/>
+            </svg>
+          </a>
+        </div>
+      ))}
     </div>
   </div>
 </section>

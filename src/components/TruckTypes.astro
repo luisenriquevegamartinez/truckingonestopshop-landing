@@ -1,111 +1,55 @@
 ---
 const trucks = [
-  {
-    type: 'Dry Van',
-    commission: '5%',
-    requirement: '1+ month active MC',
-    desc: 'The most common freight type. Consistent dry van loads on the best lanes across the country.',
-    popular: true,
-  },
-  {
-    type: 'Flatbed',
-    commission: '5%',
-    requirement: '6+ months active MC',
-    desc: 'Open-deck freight, machinery, steel, lumber. Our dispatchers specialize in high-value flatbed loads.',
-    popular: false,
-  },
-  {
-    type: 'Reefer',
-    commission: '5%',
-    requirement: '6+ months active MC',
-    desc: 'Temperature-controlled freight. We work with top food and pharmaceutical shippers to maximize rates.',
-    popular: false,
-  },
-  {
-    type: 'Step Deck',
-    commission: '5%',
-    requirement: '6+ months active MC',
-    desc: 'Oversized and tall freight without permits. Perfect for equipment and specialized cargo.',
-    popular: false,
-  },
-  {
-    type: 'Hotshot',
-    commission: '7%',
-    requirement: '6+ months MC + 35ft trailer',
-    desc: 'Time-sensitive LTL freight. Our hotshot dispatchers keep your truck moving with urgent, high-paying loads.',
-    popular: false,
-  },
-  {
-    type: 'Conestoga',
-    commission: '5%',
-    requirement: '6+ months active MC',
-    desc: 'Enclosed flatbed loads with weather protection. Premium freight, premium rates — we know where to find them.',
-    popular: false,
-  },
+  { type: 'Hotshot',          commission: '7%', img: '/images/truck-hotshot.png',   href: '#contact' },
+  { type: 'Flatbed',          commission: '5%', img: '/images/truck-flatbed.png',   href: '#contact' },
+  { type: 'Reefer',           commission: '5%', img: '/images/truck-reefer.png',    href: '#contact' },
+  { type: 'Step Deck',        commission: '5%', img: '/images/truck-stepdeck.png',  href: '#contact' },
+  { type: 'Dry Van',          commission: '5%', img: '/images/truck-dryvan.png',    href: '#contact' },
+  { type: 'Conestoga Trailer',commission: '5%', img: '/images/truck-conestoga.png', href: '#contact' },
 ];
 ---
 
-<section id="trucks" class="bg-gray-50 py-24">
+<section id="trucks" class="bg-white py-24">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <!-- Header -->
-    <div class="mb-16 text-center">
-      <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-orange-500">
-        Truck Types
-      </p>
-      <h2 class="mb-4 text-4xl font-black text-gray-900 sm:text-5xl">
-        We Dispatch Every Truck Type
-      </h2>
+    <div class="mb-14 text-center">
+      <p class="mb-2 text-sm font-semibold uppercase tracking-widest text-orange-500">What We Dispatch</p>
+      <h2 class="mb-4 text-4xl font-black text-gray-900 sm:text-5xl">Choose your truck type</h2>
       <p class="mx-auto max-w-2xl text-lg text-gray-600">
-        Whatever you drive, we have dedicated dispatchers with expertise in your
-        specific freight type and preferred lanes.
+        Your trucks will stay loaded, your routes optimized, and your paperwork handled — no matter what you drive.
       </p>
     </div>
 
-    <!-- Cards -->
-    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {
-        trucks.map((truck) => (
-          <div
-            class={`relative rounded-2xl border p-6 transition-all ${
-              truck.popular
-                ? 'border-orange-300 bg-white shadow-md shadow-orange-100'
-                : 'border-gray-200 bg-white shadow-sm hover:border-orange-200 hover:shadow-md'
-            }`}
-          >
-            {truck.popular && (
-              <div class="absolute -top-3.5 left-1/2 -translate-x-1/2">
-                <span class="rounded-full bg-orange-500 px-4 py-1 text-xs font-bold text-white shadow-sm">
-                  MOST POPULAR
-                </span>
-              </div>
-            )}
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {trucks.map((t) => (
+        <div class="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all hover:border-orange-300 hover:shadow-md">
+          <!-- Truck image -->
+          <div class="flex h-48 items-center justify-center overflow-hidden bg-gray-50 p-4">
+            <img
+              src={t.img}
+              alt={`${t.type} dispatch`}
+              class="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
+              loading="lazy"
+            />
+          </div>
 
-            <div class="mb-4 flex items-start justify-between">
-              <div>
-                <h3 class="text-xl font-black text-gray-900">{truck.type}</h3>
-                <p class="text-xs text-gray-400 mt-0.5">{truck.requirement}</p>
-              </div>
+          <!-- Card content -->
+          <div class="p-6">
+            <div class="mb-4 flex items-center justify-between">
+              <h3 class="text-xl font-black text-gray-900">{t.type}</h3>
               <div class="text-right">
-                <p class="text-2xl font-black text-orange-500">{truck.commission}</p>
+                <span class="text-2xl font-black text-orange-500">{t.commission}</span>
                 <p class="text-xs text-gray-400">commission</p>
               </div>
             </div>
-
-            <p class="mb-5 text-sm leading-relaxed text-gray-500">{truck.desc}</p>
-
             <a
-              href="#contact"
-              class={`block w-full rounded-lg py-3 text-center text-sm font-semibold transition-all ${
-                truck.popular
-                  ? 'bg-orange-500 text-white hover:bg-orange-600 shadow-sm'
-                  : 'border border-gray-300 text-gray-700 hover:border-orange-400 hover:text-orange-500'
-              }`}
+              href="#setup"
+              class="block w-full rounded-lg bg-orange-500 py-3 text-center text-sm font-bold text-white transition-all hover:bg-orange-600"
             >
-              Start with {truck.type}
+              Get a free setup
             </a>
           </div>
-        ))
-      }
+        </div>
+      ))}
     </div>
   </div>
 </section>

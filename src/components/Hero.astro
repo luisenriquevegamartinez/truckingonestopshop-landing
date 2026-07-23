@@ -1,145 +1,99 @@
 ---
 ---
 
-<section class="bg-white pt-24">
+<section class="bg-white pt-20">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="grid gap-16 py-16 lg:grid-cols-2 lg:items-center lg:py-24">
-      <!-- Left: Content + Form -->
-      <div>
+    <div class="grid min-h-[calc(100vh-80px)] gap-10 py-12 lg:grid-cols-[1fr_420px] lg:items-center lg:py-16 xl:grid-cols-[1fr_460px]">
+
+      <!-- Left: Headline + trust -->
+      <div class="order-2 lg:order-1">
         <!-- Rating badge -->
-        <div class="mb-6 flex items-center gap-3">
+        <div class="mb-6 inline-flex items-center gap-3 rounded-full border border-gray-200 bg-white px-4 py-2 shadow-sm">
           <div class="flex gap-0.5">
             {Array.from({ length: 5 }).map(() => (
-              <svg class="h-5 w-5 text-orange-400" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 0 0 .95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 0 0-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 0 0-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 0 0-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 0 0 .951-.69l1.07-3.292Z" />
+              <svg class="h-4 w-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 0 0 .95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 0 0-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 0 0-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 0 0-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 0 0 .951-.69l1.07-3.292Z"/>
               </svg>
             ))}
           </div>
-          <span class="text-sm font-medium text-gray-600">
-            <strong class="text-gray-900">4.9 / 5</strong> — 500+ owner-operators
-          </span>
+          <span class="text-sm font-semibold text-gray-700">Rated 4.9+ stars by 500+ carriers</span>
         </div>
 
-        <!-- Headline -->
-        <h1 class="mb-6 text-5xl font-black leading-[1.05] tracking-tight text-gray-900 sm:text-6xl">
-          Automate Your<br />
-          <span class="text-orange-500">Truck Business</span>
+        <h1 class="mb-5 text-5xl font-black leading-[1.06] tracking-tight text-gray-900 sm:text-6xl xl:text-7xl">
+          Automate your<br />truck business
         </h1>
 
         <p class="mb-8 max-w-lg text-lg leading-relaxed text-gray-600">
-          Dedicated dispatchers, aggressive rate negotiation, DOT compliance, and
-          accounting — everything your trucking business needs, under one roof.
+          Reliable truck dispatch services for owner-operators and fleets — maximize profits, minimize stress, drive success.
         </p>
 
-        <!-- Trust list -->
+        <!-- Trust points -->
         <ul class="mb-10 space-y-3">
-          {
-            [
-              'Dedicated dispatcher assigned to your account',
-              'Starting at just 5% commission — no hidden fees',
-              '24/7 support from pickup to delivery',
-            ].map((item) => (
-              <li class="flex items-center gap-3 text-sm text-gray-700">
-                <span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-orange-100">
-                  <svg class="h-3 w-3 text-orange-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                </span>
-                {item}
-              </li>
-            ))
-          }
+          {[
+            'Dedicated dispatcher assigned to your account',
+            'Starting at 5% — no setup fees, no contracts',
+            '24/7 support from pickup to final delivery',
+          ].map((item) => (
+            <li class="flex items-center gap-3 text-sm font-medium text-gray-700">
+              <span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-orange-500">
+                <svg class="h-3 w-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                </svg>
+              </span>
+              {item}
+            </li>
+          ))}
         </ul>
 
-        <!-- CTA buttons -->
-        <div class="flex flex-col gap-3 sm:flex-row">
-          <a
-            href="#contact"
-            class="rounded-lg bg-orange-500 px-8 py-4 text-base font-bold text-white text-center transition-all hover:bg-orange-600 hover:shadow-lg hover:shadow-orange-200"
-          >
-            Get Free Setup
-          </a>
-          <a
-            href="tel:+18887771839"
-            class="flex items-center justify-center gap-2 rounded-lg border-2 border-gray-300 px-8 py-4 text-base font-semibold text-gray-700 transition-all hover:border-gray-400 hover:text-gray-900"
-          >
-            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
-            </svg>
-            Call us now
-          </a>
+        <!-- Truck type mini nav -->
+        <div class="flex flex-wrap gap-2">
+          {['Dry Van', 'Flatbed', 'Reefer', 'Step Deck', 'Hotshot', 'Conestoga'].map((t) => (
+            <a href="#trucks" class="rounded-full border border-gray-200 bg-white px-4 py-1.5 text-xs font-semibold text-gray-600 transition-all hover:border-orange-400 hover:text-orange-500">
+              {t}
+            </a>
+          ))}
         </div>
       </div>
 
       <!-- Right: Lead form -->
-      <div
-        id="contact"
-        class="rounded-2xl border border-gray-200 bg-gray-50 p-8 shadow-sm"
-      >
-        <h2 class="mb-1 text-2xl font-black text-gray-900">Get Your Free Setup</h2>
-        <p class="mb-6 text-sm text-gray-500">
-          A dedicated dispatcher will contact you within 24 hours. No commitment required.
-        </p>
+      <div class="order-1 lg:order-2">
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-lg sm:p-8">
+          <h2 class="mb-1 text-2xl font-black text-gray-900">Get a free setup</h2>
+          <p class="mb-5 text-sm text-gray-500">A dispatcher will reach out within 24 hours.</p>
 
-        <form class="space-y-4" action="mailto:info@truckingonestopshop.net" method="POST">
-          <div>
-            <label class="mb-1.5 block text-sm font-semibold text-gray-700">Full Name</label>
-            <input
-              type="text"
-              name="name"
-              placeholder="John Smith"
-              required
-              class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 placeholder-gray-400 transition-colors focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20"
-            />
-          </div>
-          <div class="grid gap-4 sm:grid-cols-2">
+          <form class="space-y-3" action="mailto:info@truckingonestopshop.net" method="POST">
             <div>
-              <label class="mb-1.5 block text-sm font-semibold text-gray-700">Phone Number</label>
-              <input
-                type="tel"
-                name="phone"
-                placeholder="+1 (555) 000-0000"
-                required
-                class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 placeholder-gray-400 transition-colors focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20"
-              />
+              <label class="mb-1 block text-xs font-semibold uppercase tracking-wide text-gray-500">Your name</label>
+              <input type="text" name="name" placeholder="Your name" required
+                class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900 placeholder-gray-400 transition focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20" />
             </div>
             <div>
-              <label class="mb-1.5 block text-sm font-semibold text-gray-700">Email</label>
-              <input
-                type="email"
-                name="email"
-                placeholder="john@example.com"
-                required
-                class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 placeholder-gray-400 transition-colors focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20"
-              />
+              <label class="mb-1 block text-xs font-semibold uppercase tracking-wide text-gray-500">Your email</label>
+              <input type="email" name="email" placeholder="Your email" required
+                class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900 placeholder-gray-400 transition focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20" />
             </div>
-          </div>
-          <div>
-            <label class="mb-1.5 block text-sm font-semibold text-gray-700">Truck Type</label>
-            <select
-              name="truck_type"
-              class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 transition-colors focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20"
-            >
-              <option value="">Select your truck type</option>
-              <option>Dry Van</option>
-              <option>Flatbed</option>
-              <option>Reefer</option>
-              <option>Step Deck</option>
-              <option>Hotshot</option>
-              <option>Conestoga</option>
-            </select>
-          </div>
-          <button
-            type="submit"
-            class="w-full rounded-lg bg-orange-500 px-6 py-4 text-base font-bold text-white transition-all hover:bg-orange-600 hover:shadow-md hover:shadow-orange-200 active:scale-[0.99]"
-          >
-            Send Request — It's Free
-          </button>
-        </form>
-        <p class="mt-4 text-center text-xs text-gray-400">
-          No contracts. No setup fees. Cancel anytime.
-        </p>
+            <div>
+              <label class="mb-1 block text-xs font-semibold uppercase tracking-wide text-gray-500">Your phone</label>
+              <input type="tel" name="phone" placeholder="Your phone" required
+                class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900 placeholder-gray-400 transition focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20" />
+            </div>
+            <div class="flex items-start gap-3 pt-1">
+              <input type="checkbox" id="consent" name="consent" required
+                class="mt-0.5 h-4 w-4 shrink-0 accent-orange-500 rounded" />
+              <label for="consent" class="text-xs leading-relaxed text-gray-500">
+                I agree to receive emails and SMS marketing messages from Trucking One Stop Shop. Message rates may apply.
+              </label>
+            </div>
+            <button type="submit"
+              class="w-full rounded-lg bg-orange-500 px-6 py-4 text-sm font-bold text-white transition-all hover:bg-orange-600 hover:shadow-lg hover:shadow-orange-200 active:scale-[0.99]">
+              Get a free setup →
+            </button>
+          </form>
+
+          <p class="mt-4 text-center text-xs text-gray-400">No contracts. No hidden fees. Cancel anytime.</p>
+        </div>
       </div>
+
     </div>
   </div>
 </section>

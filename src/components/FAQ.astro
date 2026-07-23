@@ -1,74 +1,48 @@
 ---
 const faqs = [
   {
-    q: 'How does the dispatch process work?',
-    a: 'Once you sign up, we assign you a dedicated dispatcher who learns your preferences — your lanes, preferred cargo types, and target rates. They search the load boards, negotiate directly with brokers, and send you loads to approve before booking. You stay in control.',
+    q: 'How does Trucking One Stop Shop help trucking companies save time?',
+    a: 'We remove the two biggest time drains in trucking: searching for loads and handling paperwork. Your dispatcher sources and books loads, negotiates rates, handles check calls, processes documents, and manages broker communication — so you can focus entirely on driving.',
   },
   {
-    q: 'What is your commission rate?',
-    a: 'We charge 5% of gross revenue for most truck types (Dry Van, Flatbed, Reefer, Step Deck, Conestoga). Hotshot is 7% due to the higher volume of smaller loads. There are no setup fees, no monthly minimums, and no hidden charges.',
+    q: 'What types of loads can TOSS manage?',
+    a: 'We dispatch Dry Van, Reefer, Flatbed, Step Deck, Hotshot, Box Truck, Conestoga, and Power Only loads. Our dispatchers specialize in your specific truck type and build lane expertise so you get better loads over time.',
   },
   {
-    q: 'Do I need an active MC number to get started?',
-    a: 'Yes. Requirements vary by truck type — Dry Van only needs 1 month of active MC, while Flatbed, Reefer, Hotshot, Step Deck, and Conestoga require 6 months. This protects both you and our broker relationships.',
+    q: 'How much does it cost to use TOSS services?',
+    a: 'Pricing starts from just 5% of the gross load value for most truck types (7% for Hotshot). There are no setup fees, no monthly minimums, and no long-term contracts. We also offer promotional rates for new drivers — contact us to learn more.',
   },
   {
-    q: 'How quickly can I get set up?',
-    a: 'Most carriers are fully onboarded within 24-48 hours. After your free setup call, we verify your credentials, set up your profile, and your dispatcher gets to work finding your first loads right away.',
-  },
-  {
-    q: 'Do you handle my DOT compliance and paperwork?',
-    a: 'Yes. Our document management team handles permits, BOLs, rate confirmations, and compliance filings. We also track renewal deadlines for your operating authority and insurance so you never fall out of compliance.',
-  },
-  {
-    q: 'Can you help me get paid faster?',
-    a: 'Absolutely. We have freight factoring partnerships that can get you paid in as little as 24 hours instead of waiting 30-60 days. We also follow up aggressively with brokers on outstanding invoices.',
-  },
-  {
-    q: 'Is there a long-term contract?',
-    a: 'No long-term contract. You can cancel at any time. Our goal is to earn your business every single week by delivering results — not to lock you into a commitment you can\'t get out of.',
-  },
-  {
-    q: 'Do you dispatch for fleets or only owner-operators?',
-    a: 'Both. We work with solo owner-operators and small-to-mid-size fleets. For fleets, we assign multiple dispatchers and scale our services to match your operational needs.',
+    q: 'Can TOSS improve my profitability as a truck driver?',
+    a: 'Yes — and measurably. Our carriers typically see a 15-30% increase in gross revenue within the first 90 days. We achieve this through aggressive rate negotiation, eliminating empty miles, securing consistent backhaul loads, and reducing the hours you spend on administrative work.',
   },
 ];
 ---
 
-<section class="bg-white py-24">
+<section id="faq" class="bg-white py-24">
   <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-    <!-- Header -->
     <div class="mb-12 text-center">
-      <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-orange-500">
-        FAQ
-      </p>
-      <h2 class="mb-4 text-4xl font-black text-gray-900 sm:text-5xl">
-        Common Questions
-      </h2>
-      <p class="text-lg text-gray-600">
-        Everything you need to know before getting started with us.
-      </p>
+      <p class="mb-2 text-sm font-semibold uppercase tracking-widest text-orange-500">FAQ</p>
+      <h2 class="mb-3 text-4xl font-black text-gray-900 sm:text-5xl">Questions? We have answers</h2>
+      <a href="#setup" class="text-sm font-semibold text-orange-500 hover:underline">Ask a question →</a>
     </div>
 
-    <!-- Accordion -->
     <div class="divide-y divide-gray-200 border-y border-gray-200">
-      {
-        faqs.map((faq) => (
-          <details class="group">
-            <summary class="flex cursor-pointer items-center justify-between py-5">
-              <span class="pr-4 text-sm font-semibold text-gray-900">{faq.q}</span>
-              <span class="shrink-0 text-gray-400 transition-transform duration-200 group-open:rotate-45">
-                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                </svg>
-              </span>
-            </summary>
-            <div class="pb-5 pr-8">
-              <p class="text-sm leading-relaxed text-gray-600">{faq.a}</p>
-            </div>
-          </details>
-        ))
-      }
+      {faqs.map((faq) => (
+        <details class="group">
+          <summary class="flex cursor-pointer list-none items-start justify-between py-5 pr-2">
+            <span class="pr-4 text-base font-bold text-gray-900">{faq.q}</span>
+            <span class="mt-1 shrink-0 text-gray-400 transition-transform duration-200 group-open:rotate-45">
+              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+              </svg>
+            </span>
+          </summary>
+          <div class="pb-5 pr-8">
+            <p class="text-base leading-relaxed text-gray-600">{faq.a}</p>
+          </div>
+        </details>
+      ))}
     </div>
   </div>
 </section>

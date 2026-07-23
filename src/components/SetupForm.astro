@@ -1,0 +1,73 @@
+---
+---
+
+<section id="setup" class="relative overflow-hidden py-24">
+  <!-- Background image from logitydispatch -->
+  <div class="absolute inset-0">
+    <img src="/images/form-bg.webp" alt="" class="h-full w-full object-cover" aria-hidden="true" />
+    <div class="absolute inset-0 bg-gray-900/70"></div>
+  </div>
+
+  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+
+      <!-- Left: copy -->
+      <div>
+        <p class="mb-2 text-sm font-semibold uppercase tracking-widest text-orange-400">Get Started</p>
+        <h2 class="mb-4 text-4xl font-black text-white sm:text-5xl">Get a free setup</h2>
+        <p class="mb-3 text-lg font-semibold text-white">How to get started</p>
+        <p class="mb-8 text-base leading-relaxed text-gray-300">
+          Contact us for a free setup. Our job is to provide the best loads in the market for every driver — all you need to do is drive. No paperwork, no broker calls, no empty miles.
+        </p>
+        <ul class="space-y-3">
+          {[
+            'Submit the form and we\'ll call you within 24 hours',
+            'Your dedicated dispatcher is assigned and learns your lanes',
+            'You approve every load — we handle everything else',
+          ].map((step, i) => (
+            <li class="flex items-start gap-3 text-sm text-gray-300">
+              <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-orange-500 text-xs font-black text-white">
+                {i + 1}
+              </span>
+              {step}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Right: form -->
+      <div>
+        <div class="rounded-2xl bg-white p-8 shadow-2xl">
+          <h3 class="mb-5 text-xl font-black text-gray-900">Free setup</h3>
+          <form class="space-y-4" action="mailto:info@truckingonestopshop.net" method="POST">
+            <div>
+              <label class="mb-1 block text-xs font-semibold uppercase tracking-wide text-gray-500">Your name</label>
+              <input type="text" name="name" placeholder="Your name" required
+                class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20" />
+            </div>
+            <div>
+              <label class="mb-1 block text-xs font-semibold uppercase tracking-wide text-gray-500">Your email</label>
+              <input type="email" name="email" placeholder="Your email" required
+                class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20" />
+            </div>
+            <div>
+              <label class="mb-1 block text-xs font-semibold uppercase tracking-wide text-gray-500">Your phone</label>
+              <input type="tel" name="phone" placeholder="Your phone" required
+                class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900 placeholder-gray-400 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20" />
+            </div>
+            <div class="flex items-start gap-3">
+              <input type="checkbox" id="consent2" name="consent" required class="mt-0.5 h-4 w-4 shrink-0 accent-orange-500 rounded" />
+              <label for="consent2" class="text-xs leading-relaxed text-gray-500">
+                I agree to receive emails and SMS marketing messages from Trucking One Stop Shop. Message rates may apply.
+              </label>
+            </div>
+            <button type="submit"
+              class="w-full rounded-lg bg-orange-500 px-6 py-4 text-sm font-bold text-white transition-all hover:bg-orange-600 hover:shadow-lg hover:shadow-orange-200">
+              Get a free setup →
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

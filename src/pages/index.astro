@@ -2,13 +2,15 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Hero from '../components/Hero.astro';
-import Stats from '../components/Stats.astro';
+import PartnershipCriteria from '../components/PartnershipCriteria.astro';
 import Services from '../components/Services.astro';
-import TruckTypes from '../components/TruckTypes.astro';
 import Features from '../components/Features.astro';
+import TruckTypes from '../components/TruckTypes.astro';
+import Stats from '../components/Stats.astro';
+import SetupForm from '../components/SetupForm.astro';
 import Testimonials from '../components/Testimonials.astro';
-import FAQ from '../components/FAQ.astro';
 import CTABanner from '../components/CTABanner.astro';
+import FAQ from '../components/FAQ.astro';
 import Footer from '../components/Footer.astro';
 ---
 
@@ -16,13 +18,15 @@ import Footer from '../components/Footer.astro';
   <Navbar />
   <main>
     <Hero />
-    <Stats />
+    <PartnershipCriteria />
     <Services />
-    <TruckTypes />
     <Features />
+    <TruckTypes />
+    <Stats />
+    <SetupForm />
     <Testimonials />
-    <FAQ />
     <CTABanner />
+    <FAQ />
   </main>
   <Footer />
 </Layout>
