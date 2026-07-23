@@ -1,33 +1,54 @@
 ---
 ---
 
-<section class="bg-white pt-20">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="grid min-h-[calc(100vh-80px)] gap-10 py-12 lg:grid-cols-[1fr_420px] lg:items-center lg:py-16 xl:grid-cols-[1fr_460px]">
+<section class="relative min-h-screen overflow-hidden bg-white pt-20">
 
-      <!-- Left: Headline + trust -->
-      <div class="order-2 lg:order-1">
-        <!-- Rating badge -->
-        <div class="mb-6 inline-flex items-center gap-3 rounded-full border border-gray-200 bg-white px-4 py-2 shadow-sm">
-          <div class="flex gap-0.5">
-            {Array.from({ length: 5 }).map(() => (
-              <svg class="h-4 w-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 0 0 .95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 0 0-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 0 0-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 0 0-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 0 0 .951-.69l1.07-3.292Z"/>
-              </svg>
-            ))}
-          </div>
-          <span class="text-sm font-semibold text-gray-700">Rated 4.9+ stars by 500+ carriers</span>
+  <!-- Background frame shape (curved white panel from logitydispatch) -->
+  <img
+    src="/images/hero-frame.svg"
+    alt=""
+    aria-hidden="true"
+    class="pointer-events-none absolute inset-0 h-full w-full select-none"
+    style="object-fit: fill;"
+  />
+
+  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div
+      class="grid min-h-[calc(100vh-80px)] items-center gap-10 py-16
+             lg:grid-cols-[1fr_420px] lg:gap-16 xl:grid-cols-[1fr_460px]"
+    >
+
+      <!-- ─── LEFT: Headline + trust signals ─── -->
+      <div>
+
+        <!-- Rating badge using the real SVG stars from logitydispatch -->
+        <div class="mb-6 flex items-center gap-3">
+          <img
+            src="/images/hero-graphic.svg"
+            alt="5 stars"
+            class="h-5 w-auto"
+            loading="eager"
+          />
+          <span class="text-sm font-semibold text-gray-700">
+            Rated 4.9+ stars by 500+ carriers
+          </span>
         </div>
 
-        <h1 class="mb-5 text-5xl font-black leading-[1.06] tracking-tight text-gray-900 sm:text-6xl xl:text-7xl">
-          Automate your<br />truck business
+        <!-- Main headline — "truck" colored in brand orange -->
+        <h1
+          class="mb-5 text-5xl font-black leading-[1.06] tracking-tight text-gray-900
+                 sm:text-6xl xl:text-7xl"
+        >
+          Automate your<br />
+          <span class="text-orange-500">truck</span> business
         </h1>
 
         <p class="mb-8 max-w-lg text-lg leading-relaxed text-gray-600">
-          Reliable truck dispatch services for owner-operators and fleets — maximize profits, minimize stress, drive success.
+          Reliable truck dispatch services for owner-operators and fleets —
+          maximize profits, minimize stress, drive success.
         </p>
 
-        <!-- Trust points -->
+        <!-- Trust checklist -->
         <ul class="mb-10 space-y-3">
           {[
             'Dedicated dispatcher assigned to your account',
@@ -45,53 +66,102 @@
           ))}
         </ul>
 
-        <!-- Truck type mini nav -->
+        <!-- Truck type quick links -->
         <div class="flex flex-wrap gap-2">
           {['Dry Van', 'Flatbed', 'Reefer', 'Step Deck', 'Hotshot', 'Conestoga'].map((t) => (
-            <a href="#trucks" class="rounded-full border border-gray-200 bg-white px-4 py-1.5 text-xs font-semibold text-gray-600 transition-all hover:border-orange-400 hover:text-orange-500">
+            <a
+              href="#trucks"
+              class="rounded-full border border-gray-200 bg-white px-4 py-1.5 text-xs
+                     font-semibold text-gray-600 transition-all
+                     hover:border-orange-400 hover:text-orange-500 hover:shadow-sm"
+            >
               {t}
             </a>
           ))}
         </div>
       </div>
 
-      <!-- Right: Lead form -->
-      <div class="order-1 lg:order-2">
-        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-lg sm:p-8">
-          <h2 class="mb-1 text-2xl font-black text-gray-900">Get a free setup</h2>
-          <p class="mb-5 text-sm text-gray-500">A dispatcher will reach out within 24 hours.</p>
+      <!-- ─── RIGHT: Lead capture form ─── -->
+      <div class="w-full rounded-2xl border border-gray-100 bg-white p-6 shadow-xl sm:p-8">
+        <h2 class="mb-1 text-2xl font-black text-gray-900">Get a free setup</h2>
+        <p class="mb-5 text-sm text-gray-500">
+          A dispatcher will reach out within 24 hours.
+        </p>
 
-          <form class="space-y-3" action="mailto:info@truckingonestopshop.net" method="POST">
-            <div>
-              <label class="mb-1 block text-xs font-semibold uppercase tracking-wide text-gray-500">Your name</label>
-              <input type="text" name="name" placeholder="Your name" required
-                class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900 placeholder-gray-400 transition focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20" />
-            </div>
-            <div>
-              <label class="mb-1 block text-xs font-semibold uppercase tracking-wide text-gray-500">Your email</label>
-              <input type="email" name="email" placeholder="Your email" required
-                class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900 placeholder-gray-400 transition focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20" />
-            </div>
-            <div>
-              <label class="mb-1 block text-xs font-semibold uppercase tracking-wide text-gray-500">Your phone</label>
-              <input type="tel" name="phone" placeholder="Your phone" required
-                class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900 placeholder-gray-400 transition focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20" />
-            </div>
-            <div class="flex items-start gap-3 pt-1">
-              <input type="checkbox" id="consent" name="consent" required
-                class="mt-0.5 h-4 w-4 shrink-0 accent-orange-500 rounded" />
-              <label for="consent" class="text-xs leading-relaxed text-gray-500">
-                I agree to receive emails and SMS marketing messages from Trucking One Stop Shop. Message rates may apply.
-              </label>
-            </div>
-            <button type="submit"
-              class="w-full rounded-lg bg-orange-500 px-6 py-4 text-sm font-bold text-white transition-all hover:bg-orange-600 hover:shadow-lg hover:shadow-orange-200 active:scale-[0.99]">
-              Get a free setup →
-            </button>
-          </form>
+        <form class="space-y-3" action="mailto:info@truckingonestopshop.net" method="POST">
 
-          <p class="mt-4 text-center text-xs text-gray-400">No contracts. No hidden fees. Cancel anytime.</p>
-        </div>
+          <div>
+            <label class="mb-1 block text-xs font-semibold uppercase tracking-wide text-gray-500">
+              Your name
+            </label>
+            <input
+              type="text"
+              name="name"
+              placeholder="Your name"
+              required
+              class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
+                     placeholder-gray-400 transition
+                     focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20"
+            />
+          </div>
+
+          <div>
+            <label class="mb-1 block text-xs font-semibold uppercase tracking-wide text-gray-500">
+              Your email
+            </label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Your email"
+              required
+              class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
+                     placeholder-gray-400 transition
+                     focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20"
+            />
+          </div>
+
+          <div>
+            <label class="mb-1 block text-xs font-semibold uppercase tracking-wide text-gray-500">
+              Your phone
+            </label>
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Your phone"
+              required
+              class="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm text-gray-900
+                     placeholder-gray-400 transition
+                     focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500/20"
+            />
+          </div>
+
+          <div class="flex items-start gap-3 pt-1">
+            <input
+              type="checkbox"
+              id="consent-hero"
+              name="consent"
+              required
+              class="mt-0.5 h-4 w-4 shrink-0 accent-orange-500 rounded"
+            />
+            <label for="consent-hero" class="text-xs leading-relaxed text-gray-500">
+              I agree to receive emails and SMS marketing messages from
+              Trucking One Stop Shop. Message rates may apply.
+            </label>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full rounded-lg bg-orange-500 px-6 py-4 text-sm font-bold text-white
+                   transition-all hover:bg-orange-600 hover:shadow-lg hover:shadow-orange-200
+                   active:scale-[0.99]"
+          >
+            Get a free setup →
+          </button>
+        </form>
+
+        <p class="mt-4 text-center text-xs text-gray-400">
+          No contracts. No hidden fees. Cancel anytime.
+        </p>
       </div>
 
     </div>
