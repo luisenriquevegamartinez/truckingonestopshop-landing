@@ -1,0 +1,86 @@
+---
+const faqs = [
+  {
+    q: 'How does the dispatch process work?',
+    a: 'Once you sign up, we assign you a dedicated dispatcher who learns your preferences — your lanes, preferred cargo types, and target rates. They search the load boards, negotiate directly with brokers, and send you loads to approve before booking. You stay in control.',
+  },
+  {
+    q: 'What is your commission rate?',
+    a: 'We charge 5% of gross revenue for most truck types (Dry Van, Flatbed, Reefer, Step Deck, Conestoga). Hotshot is 7% due to the higher volume of smaller loads. There are no setup fees, no monthly minimums, and no hidden charges.',
+  },
+  {
+    q: 'Do I need an active MC number to get started?',
+    a: 'Yes. Requirements vary by truck type — Dry Van only needs 1 month of active MC, while Flatbed, Reefer, Hotshot, Step Deck, and Conestoga require 6 months. This protects both you and our broker relationships.',
+  },
+  {
+    q: 'How quickly can I get set up?',
+    a: 'Most carriers are fully onboarded within 24-48 hours. After your free setup call, we verify your credentials, set up your profile, and your dispatcher gets to work finding your first loads right away.',
+  },
+  {
+    q: 'Do you handle my DOT compliance and paperwork?',
+    a: 'Yes. Our document management team handles permits, BOLs, rate confirmations, and compliance filings. We also track renewal deadlines for your operating authority and insurance so you never fall out of compliance.',
+  },
+  {
+    q: 'Can you help me get paid faster?',
+    a: 'Absolutely. We have freight factoring partnerships that can get you paid in as little as 24 hours instead of waiting 30-60 days. We also follow up aggressively with brokers on outstanding invoices.',
+  },
+  {
+    q: 'What if I\'m not happy with the service?',
+    a: 'There\'s no long-term contract. You can cancel at any time. Our goal is to earn your business every single week by delivering results — not to lock you into a commitment.',
+  },
+  {
+    q: 'Do you dispatch for fleets or only owner-operators?',
+    a: 'Both. We work with solo owner-operators and small-to-mid-size fleets. For fleets, we assign multiple dispatchers and scale our services to match your operational needs.',
+  },
+];
+---
+
+<section class="py-24">
+  <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="mb-12 text-center">
+      <p
+        class="mb-3 text-sm font-semibold uppercase tracking-widest text-orange-400"
+      >
+        FAQ
+      </p>
+      <h2 class="mb-4 text-4xl font-black text-white sm:text-5xl">
+        Common Questions
+      </h2>
+      <p class="text-lg text-slate-400">
+        Everything you need to know before getting started with us.
+      </p>
+    </div>
+
+    <!-- Accordion -->
+    <div class="space-y-3">
+      {
+        faqs.map((faq, i) => (
+          <details class="group rounded-2xl border border-slate-700/50 bg-slate-800/40">
+            <summary class="flex cursor-pointer items-center justify-between px-6 py-5">
+              <span class="pr-4 text-sm font-semibold text-white">{faq.q}</span>
+              <span class="shrink-0 text-slate-400 transition-transform group-open:rotate-45">
+                <svg
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 4.5v15m7.5-7.5h-15"
+                  />
+                </svg>
+              </span>
+            </summary>
+            <div class="px-6 pb-5">
+              <p class="text-sm leading-relaxed text-slate-400">{faq.a}</p>
+            </div>
+          </details>
+        ))
+      }
+    </div>
+  </div>
+</section>
